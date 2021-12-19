@@ -1,5 +1,6 @@
-import { loadModules } from 'esri-loader';
+import { setDefaultOptions, loadModules } from 'esri-loader';
 
+setDefaultOptions({ css: true });
 class MapController {
   initMap = async () => {
     const [Map, MapView] = await loadModules(["esri/Map", "esri/views/MapView"]);
